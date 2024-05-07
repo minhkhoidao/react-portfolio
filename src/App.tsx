@@ -9,6 +9,9 @@ import About from "./pages/About";
 import BackToTop from "./components/BackToTop";
 
 import { Routes, Route, BrowserRouter as Router, useLocation } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
+import Works from "./pages/Work";
 
 function App() {
   return (
@@ -41,9 +44,9 @@ const AnimatedRoutes = () => {
       >
         <Routes>
           <Route path="/" element={<About />} />
-          {/* <Route path="/resume" element={<Resume />} /> */}
-          {/* <Route path="/works" element={<Works />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

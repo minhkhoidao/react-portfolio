@@ -1,17 +1,19 @@
 import React, { FC } from "react";
 import "./styles.scss";
+import { IoLocation } from "react-icons/io5";
 
 interface InfoProps {
-  icon: string;
   children: React.ReactNode;
 }
 
-const Info: FC<InfoProps> = ({ icon, children }) => {
+const Info: FC<InfoProps> = ({ children }) => {
   return (
     <div className="info">
       <div className="property">
-        <i className={`ion-ios-${icon}`} />
-        <strong>{icon}:</strong>
+        <i>
+          <IoLocation />
+        </i>
+        <strong>Location:</strong>
       </div>
       <span>{children}</span>
     </div>

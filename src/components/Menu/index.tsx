@@ -1,20 +1,24 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
 import "./styles.scss";
+import { IoIosPerson } from "react-icons/io";
+import { IoMdListBox } from "react-icons/io";
+import { IoIosBrush } from "react-icons/io";
+import { IoMdContact } from "react-icons/io";
 
 const Menu = () => {
   return (
     <ul className="menu">
-      <Menu.Item name={"person"} link="/#about">
+      <Menu.Item link="/#about" icon={IoIosPerson}>
         About
       </Menu.Item>
-      <Menu.Item name={"android-list"} link="/resume#resume">
+      <Menu.Item link="/resume#resume" icon={IoMdListBox}>
         Resume
       </Menu.Item>
-      <Menu.Item name={"paintbrush"} link="/works#works">
+      <Menu.Item link="/works#works" icon={IoIosBrush}>
         Works
       </Menu.Item>
-      <Menu.Item name={"at"} link="/contact#contact">
+      <Menu.Item link="/contact#contact" icon={IoMdContact}>
         Contact
       </Menu.Item>
     </ul>
@@ -24,14 +28,17 @@ const Menu = () => {
 Menu.Item = ({
   link = "#",
   children,
-  name,
+  icon: Icon,
 }: {
   link: string;
   children: React.ReactNode;
-  name: string;
+  icon: React.FC;
 }) => (
   <li>
-    <NavHashLink smooth to={link} className={"active"}>
+    <NavHashLink smooth to={link}>
+      <span>
+        <Icon />
+      </span>
       {children}
     </NavHashLink>
   </li>

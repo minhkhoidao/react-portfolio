@@ -22,6 +22,8 @@ const Skills = () => {
                 <li id="redux">Redux</li>
                 <li id="node">Node</li>
                 <li id="javascript">JavaScript</li>
+                <li id="golang">Golang</li>
+                <li id="nest">Nest</li>
             </ul>
         </div>
     );

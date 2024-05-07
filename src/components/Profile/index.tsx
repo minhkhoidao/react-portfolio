@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import js from "../../assets/js.png";
+import avt from "../../assets/avatar.jpg";
 import { ThemeContext } from "../../context";
 import { useAnimation } from "../../hooks/useAnimation";
 import Info from "../Info";
@@ -17,23 +17,20 @@ const Profile = () => {
           className={`profile__photo ${animation}`}
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
-        <img src={js} alt={type} />
+        <img src={avt} alt={type} />
       </div>
       <div className="profile__content">
         <div className="profile__title">Dao Minh Khoi</div>
         <span>Software Development</span>
         <SocialLinks />
-        <Info icon="location">Hanoi, VietNam</Info>
+        <Info>Hanoi, VietNam</Info>
         <Skills />
       </div>
       <div className="profile__contact">
-        <a
-          href="#"
-          rel="noreferrer"
-        >
+        <a href="#" rel="noreferrer">
           <span>Download CV</span>
         </a>
-        <a href="#">
+        <a href="mailto:gogotuyer22@gmail.com">
           <span>Contact Me</span>
         </a>
       </div>
