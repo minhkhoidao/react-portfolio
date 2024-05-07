@@ -12,7 +12,7 @@ const scrollToTop = () => {
 const BackToTop = () => {
     const [visible, setVisible] = useState('');
     useEffect(() => {
-        function handleScroll(e:Event) {
+        function handleScroll(_e:Event) {
             if (window.scrollY > 0) {
                 setVisible('show')
             } else {

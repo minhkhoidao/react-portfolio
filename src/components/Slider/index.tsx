@@ -38,7 +38,7 @@ const Slider: FC<SliderProps> = ({ classNames, images }) => {
     setImg(images[imgIndex]);
   };
 
-  const handleMouseOut = (e: any) => {
+  const handleMouseOut = (_e: any) => {
     setImg(images[0]);
     setAItem(0);
   };
