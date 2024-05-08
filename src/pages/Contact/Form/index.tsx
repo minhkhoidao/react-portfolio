@@ -4,12 +4,11 @@ import { useState } from "react";
 import "./styles.scss";
 
 interface FormValues {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-  }
-  
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const ContactForm = () => {
   const [successResult, setSuccessResult] = useState("");
@@ -49,10 +48,10 @@ const ContactForm = () => {
     async onSubmit(values) {
       try {
         await emaijs.send(
-          "gmail",
-          "contact-form",
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           values,
-          "user_ivLokzQVLoHuv1nbXEhJi",
+          import.meta.env.VITE_EMAILJS_USER_ID,
         );
         form.resetForm();
         setSuccessResult("Thank you! Your message has been successfully sent");
